@@ -1,0 +1,21 @@
+app = "n8n-leo-app"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  N8N_BASIC_AUTH_ACTIVE = "true"
+  N8N_BASIC_AUTH_USER = "leo"
+  N8N_BASIC_AUTH_PASSWORD = "securepassword123"
+
+[[services]]
+  internal_port = 5678
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]

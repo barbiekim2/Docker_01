@@ -1,0 +1,8 @@
+FROM n8nio/n8n
+
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=leo
+ENV N8N_BASIC_AUTH_PASSWORD=securepassword123
+ENV WEBHOOK_URL=https://n8n-leo-app.fly.dev
+
+EXPOSE 5678

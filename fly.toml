@@ -1,7 +1,10 @@
 app = "n8n-leo-app"
 
+kill_signal = "SIGINT"
+kill_timeout = 5
+
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = "./Dockerfile"
 
 [env]
   N8N_BASIC_AUTH_ACTIVE = "true"
